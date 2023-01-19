@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="https://wundertec.com/img/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://wundertec.com/img/favicon.ico" />
+		<title>Wundertec</title>
+
+		<link rel="canonical" href="https://wundertec.com/" />
+		<meta
+			name="keywords"
+			content="Desarrollamos software a la medida de las necesidades de nuestros clientes." />
+		<meta
+			name="description"
+			content="Desarrollamos software a la medida de las necesidades de nuestros clientes. Para lograrlo, en todo el proceso ponemos a las personas en el centro de la discusión, lo que aumenta la tasa de éxito del proyecto y facilita el retorno de la inversión en tecnología: digitalizamos empresas y personas." />
+
+		<meta name="twitter:card" content="product" />
+		<meta name="twitter:site" content="" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:creator" content="@creativetim" />
+		<meta
+			name="twitter:image"
+			content="https://wundertec.com/img/wundertec-logo.png" />
+
+		<meta property="fb:app_id" content="2271262106474070" />
+		<meta property="og:title" content="Wundertec - Make IT Happen" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://wundertec.com/" />
+		<meta
+			property="og:image"
+			content="https://wundertec.com/img/wundertec-logo.png" />
+		<meta
+			property="og:description"
+			content="Desarrollamos software a la medida de las necesidades de nuestros clientes. Para lograrlo, en todo el proceso ponemos a las personas en el centro de la discusión, lo que aumenta la tasa de éxito del proyecto y facilita el retorno de la inversión en tecnología: digitalizamos empresas y personas." />
+		<meta property="og:site_name" content="Wundertec" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+			rel="stylesheet" />
+
+		<link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+
+		<link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+		<link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+		<script
+			src="https://kit.fontawesome.com/42d5adcbca.js"
+			crossorigin="anonymous"></script>
+		<link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+		<link
+			id="pagestyle"
+			href="../../assets/css/soft-ui-dashboard.min.css?v=1.0.8"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="../../assets/css/wundertec.css" />
+		<link href="../../assets/css/loader.css" rel="stylesheet" />
+		<link href="../../assets/css/common.css" rel="stylesheet" />
+
+		<style>
+			.async-hide {
+				opacity: 0 !important;
+			}
+		</style>
+	</head>
+
+	<body class="g-sidenav-show bg-gray-100">
+		<div id="loader">
+			<div class="middle">
+				<div class="bar bar1"></div>
+				<div class="bar bar2"></div>
+				<div class="bar bar3"></div>
+				<div class="bar bar4"></div>
+				<div class="bar bar5"></div>
+				<div class="bar bar6"></div>
+				<div class="bar bar7"></div>
+				<div class="bar bar8"></div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="modal-estatus"
+			tabindex="-1"
+			aria-labelledby="modal-estatus-label"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Estatus del proyecto</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="card h-100">
+								<div class="card-header pb-0 p-3">
+									<h6 class="mb-0" id="titulo-proyecto"></h6>
+								</div>
+								<div class="card-body pb-0 p-3">
+									<ul
+										class="list-group"
+										id="recordProyecto"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-primary"
+							data-bs-dismiss="modal">
+							Cerrar
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="toast-container top-1 start-50 translate-middle-x position-fixed z-index-sticky">
+			<div class="row">
+				<div
+					class="toast bg-danger text-white p-2"
+					style="--bs-bg-opacity: 0.5"
+					id="toast"
+					role="alert"
+					aria-live="assertive"
+					aria-atomic="true">
+					<div class="toast-header">
+						<strong class="me-auto" id="toast-title"
+							>Notificación</strong
+						>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="toast"
+							aria-label="Close"></button>
+					</div>
+					<div class="toast-body" id="toast-body">
+						Esta es una notificación
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<aside
+			class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3"
+			id="sidenav-main"></aside>
+		<div
+			class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+			<!-- Navbar -->
+			<nav
+				class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
+				id="navbarBlur"
+				navbar-scroll="true">
+				<div class="container-fluid py-1 px-3">
+					<nav aria-label="breadcrumb">
+						<ol
+							class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+							<li class="breadcrumb-item text-sm">
+								<a
+									class="opacity-5 text-dark"
+									href="javascript:;"
+									>Página</a
+								>
+							</li>
+							<li
+								class="breadcrumb-item text-sm text-dark active"
+								aria-current="page">
+								Proyectos
+							</li>
+						</ol>
+						<h6 class="font-weight-bolder mb-0">Proyectos</h6>
+					</nav>
+					<div
+						class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
+						id="navbar">
+						<ul class="ms-md-auto navbar-nav justify-content-end">
+							<li
+								class="nav-item d-flex dropdown align-items-center">
+								<a
+									href="javascript:;"
+									class="nav-link text-body font-weight-bold px-0"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<img
+										src="../assets/img/team-2.jpg"
+										class="avatar avatar-sm me-sm-1"
+										id="imagen-usuario" />
+									<span
+										class="d-sm-inline d-none"
+										id="nombre-usuario"></span>
+								</a>
+								<ul
+									class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4"
+									aria-labelledby="dropdownMenuButton">
+									<li class="mb-2">
+										<a
+											href="javascript:;"
+											id="btn-perfil"
+											class="dropdown-item border-radius-md d-flex justify-content-between align-items-center">
+											<i
+												class="fa fa-user me-1"
+												aria-hidden="true"></i
+											>Mi perfil
+										</a>
+									</li>
+									<li class="mb-2">
+										<a
+											href="javascript:;"
+											id="btn-logout"
+											class="dropdown-item border-radius-md d-flex justify-content-between align-items-center">
+											<i
+												class="fa fa-sign-out me-1"
+												aria-hidden="true"></i
+											>Cerrar sesión
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li
+								class="nav-item d-xl-none ps-3 d-flex align-items-center">
+								<a
+									href="javascript:;"
+									class="nav-link text-body p-0"
+									id="iconNavbarSidenav">
+									<div class="sidenav-toggler-inner">
+										<i class="sidenav-toggler-line"></i>
+										<i class="sidenav-toggler-line"></i>
+										<i class="sidenav-toggler-line"></i>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+
+			<div class="container-fluid py-4">
+				<section class="py-3">
+					<div class="row">
+						<div class="col-12 d-flex justify-content-between">
+							<h5 id="titulo-proyectos">Nuestros proyectos</h5>
+							<div
+								class="btn-group"
+								role="group"
+								aria-label="Basic radio toggle button group">
+								<input
+									type="radio"
+									class="btn-check"
+									name="btn-proyectos"
+									id="btn-todos"
+									autocomplete="off"
+									checked />
+								<label
+									class="btn btn-outline-primary"
+									for="btn-todos"
+									>Todos</label
+								>
+								<input
+									type="radio"
+									class="btn-check"
+									name="btn-proyectos"
+									id="btn-activos"
+									autocomplete="off" />
+								<label
+									class="btn btn-outline-primary"
+									for="btn-activos"
+									>Activos</label
+								>
+								<input
+									type="radio"
+									class="btn-check"
+									name="btn-proyectos"
+									id="btn-inactivos"
+									autocomplete="off" />
+								<label
+									class="btn btn-outline-primary"
+									for="btn-inactivos"
+									>Inactivos</label
+								>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mt-lg-4 mt-2" id="draw"></div>
+				</section>
+
+				<footer class="footer p-3">
+					<div class="container-fluid">
+						<div
+							class="row align-items-center justify-content-lg-between">
+							<div class="col-lg-12 mb-lg-0 mb-4">
+								<div
+									class="copyright text-center text-sm text-muted text-lg-start">
+									Powered <i class="fa fa-bolt"></i> by
+									<a
+										href="https://www.wundertec.com"
+										class="font-weight-bold"
+										target="_blank"
+										>Wundertec</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<script src="../../assets/js/core/popper.min.js"></script>
+		<script src="../../assets/js/core/bootstrap.min.js"></script>
+		<script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+		<script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+
+		<script src="../assets/js/plugins/dragula/dragula.min.js"></script>
+		<script src="../assets/js/plugins/jkanban/jkanban.js"></script>
+		<script>
+			var win = navigator.platform.indexOf("Win") > -1;
+			if (win && document.querySelector("#sidenav-scrollbar")) {
+				var options = {
+					damping: "0.5",
+				};
+				Scrollbar.init(
+					document.querySelector("#sidenav-scrollbar"),
+					options
+				);
+			}
+		</script>
+
+		<script src="../../assets/js/soft-ui-dashboard.min.js?v=1.0.8"></script>
+		<script src="../../assets/js/const.js"></script>
+		<script src="../../assets/js/loader.js"></script>
+		<script src="../../assets/js/global.js"></script>
+		<script src="../../assets/js/draws.js"></script>
+		<script src="../../assets/js/pages.js"></script>
+		<script src="../../assets/js/pets/req.js"></script>
+		<script src="../../assets/js/proyectos/draw.js"></script>
+		<script src="../../assets/js/status.js"></script>
+		<script src="../../assets/js/proyectos/index.js"></script>
+		<script src="../../assets/js/authorization.js"></script>
+		<script src="../../assets/js/principal/toast-notifications.js"></script>
+	</body>
+</html>

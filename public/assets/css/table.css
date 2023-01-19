@@ -1,0 +1,7 @@
+#tfooter {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}

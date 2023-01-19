@@ -1,0 +1,57 @@
+:root {
+    --line-height: 2.9rem;
+}
+
+.custom-select select{
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    display: block !important;
+    width: 0.5px !important;
+    height: 100% !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    border: none;
+}
+
+.select-options{
+    padding-left: 0%;
+}
+
+.select-content{
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d2d6da;
+}
+
+.custom-select.active .select-content{
+    display: block;
+}
+
+.select-content .select-busqueda{
+    position: relative;
+}
+
+.select-content .select-options{
+    margin-top: .8rem;
+    max-height: calc(var(--line-height) * 3);
+    overflow-y: auto;
+}
+
+.select-options li{
+    list-style: none;
+    cursor: pointer;
+    line-height: 1.4rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.select-options li:hover, li.selected{
+    background-color: #d2d6da;
+}
+
+
+
+

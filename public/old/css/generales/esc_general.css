@@ -1,0 +1,60 @@
+/*------------------------------------------CUERPO DE LA PÁGINA-----------------------------------*/
+body {
+	font-family: Gill Sans, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	max-width: 100vw;
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.container-ccenter {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-xcenter {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-ycenter {
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+*::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FFB4A2;
+    border-radius: 20px;
+    border: 2px solid #E5989B;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

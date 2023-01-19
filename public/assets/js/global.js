@@ -1,0 +1,2 @@
+let dataTable;
+let dataTareas;

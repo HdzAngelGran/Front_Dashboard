@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/generalJuego.css">
+    <link rel="stylesheet" type="text/css" href="./css/estiloCreacion.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/generales/esc_general.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/popups.css">
+    <title>Crear juego: Rompecabezas</title>
+</head>
+
+<body>
+    <div id="blocker"></div>
+    <div id="loader"></div>
+    <div id="popAlert"></div>
+
+    <header class="stick" id="navBar">
+    </header>
+
+    <div class="sidenav">
+        <div class="cajaInfo">
+            <h1 id="materia">Materia</h1>
+        </div>
+        <div class="cajaInfo">
+            <h1 id="actividad">Nombre Actividad</h1>
+        </div>
+        <div class="cajaInfo">
+            <h1 id="tipoJ">Tipo Juego</h1>
+        </div>
+        <div class="cajaInfo2">
+            <form id="elementosCalif">
+                <h1>Tiempo en minutos</h1>
+                <input class="inputsJuego" type="number" value="5" id="tiempoJ" name="tiempo">
+                <h1>Intentos</h1>
+                <input class="inputsJuego" type="number" value="3" id="intentosJ" name="intentos">
+            </form>
+        </div>
+    </div>
+
+    <div class="scrollY">
+        <div id="content">
+            <form id="formJ">
+                <div id="contenedor">
+                    <div class="elementoJuego">
+                        <div class="elementosRompecabezas">
+                            <h5 class="tituloRompe">Carga tu Imagen</h5>
+                            <div class="image-upload">
+                                <label for="imagen">
+                                <img class="cargaImagen" id="cargaImagen" src="../../../../images/upload.png"/>
+                                </label>
+                                <input type="file" name="imagen" id="imagen" accept="image/png, image/jpeg">
+                            </div>
+                            <div class="tamRompe">
+                                <div class="ejes">
+                                    <h5>EJE Y</h5>
+                                    <div class="respuestaCambiar" id="divEjeY">
+                                        <select class="valorRespuesta" name="" id="ejeY">
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ejes">
+                                    <h5>EJE X</h5>
+                                    <div class="respuestaCambiar" id="divEjeX">
+                                        <select class="valorRespuesta" name="" id="ejeX">
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+<script src="../../../../js/const.js"></script>
+<script src="../../../js/const.js"></script>
+<script src="../../js/const.js"></script>
+<script src="../../js/validarCampos.js"></script>
+<script src="../../../js/common.js"></script>
+<script src="../../../../js/cabecera.js"></script>
+<script src="../../../../js/validarJWT.js"></script>
+<script src="../../../../escritorios/js/renovarJWT.js"></script>
+<script src="../../../../js/loaders.js"></script>
+<script src="../../../../js/formularios.js"></script>
+<script src="js/form.js"></script>
+<script src="../../../js/actTarjeta.js"></script>
+<script src="../../js/petImagen.js"></script>
+<script src="../../js/petJuegos.js"></script>
+<script src="../../js/navBar.js"></script>
+<script src="../../../../js/alertas.js"></script>
+<script src="../js/actividad.js"></script>
+<script src="../js/common.js"></script>
+<script src="js/impCodigo.js"></script>
+<script src="js/main.js"></script>
+
+</html>

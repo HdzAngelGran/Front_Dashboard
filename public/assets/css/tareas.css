@@ -1,0 +1,68 @@
+.acordeon{
+    border-radius: 15px;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.collapsible {
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-weight: bold;
+}
+
+.acordeon .collapsible:first-of-type{
+    border-radius: 15px 15px 0 0;
+}
+
+.acordeon .collapsible:last-of-type{
+    border-radius: 0 0 15px 15px;
+}
+
+.active-acordeon, .collapsible:hover {
+    background-color: #eee;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active-acordeon:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#imagen-proyecto {
+    height: 4rem;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: fixed;
+}
+
+.contenedor-overlay:hover #imagen-proyecto {
+    filter: brightness(50%);
+}
+  
+.contenedor-overlay:hover .overlay {
+    opacity: 1;
+    color: white;
+}

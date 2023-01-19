@@ -1,0 +1,59 @@
+/*Helpers*/
+
+
+/*Helpers*/
+
+.logo-wundertec {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 50px;
+}
+
+.navbar-vertical .navbar-brand-img,
+.navbar-vertical .navbar-brand>img {
+    max-height: 2.5rem;
+}
+
+.card.card-background.card-background-mask-secondary:after {
+    background-image: linear-gradient(310deg, #c6da51, #c6da51);
+    opacity: .85;
+}
+
+.logo-proyecto {
+    width: 50px;
+}
+
+.bg-gradient-dark {
+    background-image: linear-gradient(310deg, #ebeaea, #ffffff);
+}
+
+.bg-gradient-dark2 {
+    background-image: linear-gradient(310deg, #141727, #3a416f);
+    color: white;
+}
+
+.copyright {
+    float: right;
+}
+
+.copyright i {
+    color: #c6db51;
+}
+
+.copyright a {
+    color: #c6db51;
+}
+
+.link-perfil img {
+    width: 40px;
+}
+
+@media (max-width: 425px) {
+    .logo-wundertec {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        width: 50px;
+    }
+}
